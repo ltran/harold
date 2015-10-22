@@ -1,9 +1,7 @@
 require "./spec_helper"
 
-describe Harold do
-  # TODO: Write tests
-
+Spec2.describe Harold do
   it "works" do
-    false.should eq(true)
+    expect(false).to eq(true)
   end
 end
