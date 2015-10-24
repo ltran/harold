@@ -1,6 +1,6 @@
 # harold
 
-harold - crystal library for inter-process pub-sub communication.
+harold - crystal library for in-process pub-sub communication.
 
 ## Installation
 
