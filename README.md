@@ -23,16 +23,26 @@ Harold.start
 ### Publishing
 
 ```crystal
-Harold.publish("topic", "message")
+Harold.publish(topic :: String, "message")
 ```
+
+NOTE: `topic` is expected to be a valid crystal identifier.
+
+NOTE: ` :: {{Type}}` part after topic name is the type annotation for message.
 
 ### Subscribing
 
 ```crystal
-Harold.subscribe("topic").each do |message|
-  puts "Someone said: #{message}"
+spawn do
+  Harold.subscribe(topic :: String).each do |message|
+    puts "Someone said: #{message}"
+  end
 end
 ```
+
+NOTE: `topic` is expected to be a valid crystal identifier.
+
+NOTE: ` :: {{Type}}` part after topic name is the type annotation for message.
 
 ## Development
 
